@@ -133,9 +133,7 @@ table {
 .box {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 20vh;
-  margin: 0 auto;
+
   /* flex-direction: column; */
 }
 .btn {
@@ -147,4 +145,11 @@ table {
   color: white;
   border: none;
   cursor: pointer;
+}
+#root{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: wheat;
+	padding-bottom: 3rem;
 }

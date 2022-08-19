@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="root"></div>
-<!-- <img src="../assets/basketball.jpg" alt=""> -->
+<!-- <img src="./assets/basketball.jpg" alt=""> -->
 
 <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
@@ -21,43 +21,34 @@
 
 let root= document.getElementById("root")
 
-// function Card() {
-//   return (
-//     <div>
-//       <h2>Hello React!</h2>
-//     </div>
-//   );
-// }
+console.log(root)
 
-class ChangeButton extends React.Component{
-constructor(props){
-super(props)
-this.state={
-  bascketball : "basketball.jpg",
-  laptop : "laptop.jpg",
-  phone: "phone.jpg",
-  pubj: "pubg.jpeg",
-  tiger: "tiger.jpg"
-}
-}
-
-  render(){
-      return (
-    <div className="box">
-   <button className="btn" onClick={()=>{
-    <img src="../assets/`${this.state.bascketball}`" alt=""/>
-   }}  > BasketBall </button>
-   <button   className="btn"  >Cricket </button>
-   <button  className="btn"  >Laptop  </button>
-   <button  className="btn"  >Phone  </button>
-   <button  className="btn"  >Pubg </button>
-   <button  className="btn" >Tiger </button>
-    </div>
-  );
+class App extends React.Component{
+  constructor(){
+  super()
+  this.state={
+    selected: "basketball"
   }
+  }
+  render(){
+    let data = ["basketball", "cricket", "laptop", "phone", "tiger", "pubg" ];
+return (
+
+<div>
+  <div>
+{data.map((elm)=> <button style={{fontSize:"1.3rem", margin: "20px"}}  onClick={()=>(this.setState({selected: elm}))} > {elm.toLocaleUpperCase()} </button>
+)}  
+</div>
+<img src= { `./assets/${this.state.selected}.jpg `}  alt="" width={"300px"}/>
+
+</div>
+ 
+)
+  }
+
 }
 
-ReactDOM.render(<ChangeButton/>,root)
+ReactDOM.render(<App/>,root)
 </script>
 </body>
 </html>

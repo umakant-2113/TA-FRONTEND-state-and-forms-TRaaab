@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="root"></div>
+<!-- <img src="../assets/basketball.jpg" alt=""> -->
+
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+
+
+let root= document.getElementById("root")
+
+// function Card() {
+//   return (
+//     <div>
+//       <h2>Hello React!</h2>
+//     </div>
+//   );
+// }
+
+class ChangeButton extends React.Component{
+constructor(props){
+super(props)
+this.state={
+  bascketball : "basketball.jpg",
+  laptop : "laptop.jpg",
+  phone: "phone.jpg",
+  pubj: "pubg.jpeg",
+  tiger: "tiger.jpg"
+}
+}
+
+  render(){
+      return (
+    <div className="box">
+   <button className="btn" onClick={()=>{
+    <img src="../assets/`${this.state.bascketball}`" alt=""/>
+   }}  > BasketBall </button>
+   <button   className="btn"  >Cricket </button>
+   <button  className="btn"  >Laptop  </button>
+   <button  className="btn"  >Phone  </button>
+   <button  className="btn"  >Pubg </button>
+   <button  className="btn" >Tiger </button>
+    </div>
+  );
+  }
+}
+
+ReactDOM.render(<ChangeButton/>,root)
+</script>
+</body>
+</html>

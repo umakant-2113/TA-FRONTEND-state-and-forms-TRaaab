@@ -1,0 +1,7 @@
+body{
+  background-color:ghostwhite;
+}
+#root{
+  display: flex;
+  justify-content: center;
+}

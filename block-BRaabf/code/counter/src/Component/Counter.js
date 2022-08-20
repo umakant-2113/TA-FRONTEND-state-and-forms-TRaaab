@@ -42,7 +42,7 @@ render(){
     </div>
     <div className="btn">
         {[5,10,15].map((step,index)=>{
-          return   <button className=""  key={index} onClick={this.handleStep }  >{step}  </button>
+          return   <button id={this.state.step ===step ? "active--step" : ""}  key={index} onClick={this.handleStep }  >{step}  </button>
         })}
     </div>
    

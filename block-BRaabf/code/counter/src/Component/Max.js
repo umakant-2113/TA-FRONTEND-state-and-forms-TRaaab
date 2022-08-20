@@ -10,18 +10,16 @@ class MaxCount extends React.Component {
   }
   }
 increament=()=>{
-  
         this.setState({
             counter: this.state.max> this.state.counter ?  this.state.counter + this.state.step :this.state.max
-    
         })
-  
- 
 }
 
 decreament=()=>{
     this.setState({
+
         counter: this.state.max> this.state.counter ?  this.state.counter - this.state.step :this.state.max
+
     })
 }
 reset=()=>{

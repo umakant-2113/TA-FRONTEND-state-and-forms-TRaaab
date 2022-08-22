@@ -123,6 +123,7 @@ h2{
     background-color: rgb(253,215,140);
     font-size: 3rem;
     padding: 7px 1.5rem;
+    cursor: pointer;
 }
 p{
     font-size: 2rem;

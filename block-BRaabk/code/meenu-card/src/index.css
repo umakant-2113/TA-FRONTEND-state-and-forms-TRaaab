@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* general css */
+
+.div{
+  display: flex;
+justify-content: space-between;
+flex-wrap: wrap; 
+}
+
+.flex-45{
+  flex: 0 1 45%;
+  /* border: 2px solid red; */
+  box-shadow:  1px 1px 10px 5px rgb(164, 153, 164);
+  margin: 10px 2rem;
+  display: flex;
+  border-radius: 15px;
+  font-size: 0;
+
+}
+.figure-45{
+  width: 45%;
+}
+.img{
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+
+}
+.title-45{
+  width: 45%;
+}
+
+.ui{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0;
+}
+
+.header{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+  font-weight: 700;
+  background-color: thistle;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: steelblue;
+}
+.list li{
+  font-size: 1.3rem;
+  background-color: thistle;
+  padding: .4rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  color: steelblue ;
+}
+.title-div{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.title{
+  font-size: 1.4rem;
+  margin: 5px;
+  font-weight: 600;
+  color: slateblue;
+}
+.price{
+  font-size: 1.4rem; 
+  margin: 5px;
+  color: slateblue;
+}
+.desc{
+  font-size: 1.25rem; 
+  margin: 5px;
+  line-height: 1.5rem;
+}
+#active{
+  font-size: 1.4rem;
+  background-color: slategray;
+  color: white;
+}

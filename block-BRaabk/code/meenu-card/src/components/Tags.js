@@ -46,7 +46,6 @@ render(){
         <div className="ui">
     <CreateUi  everyOne={All}  />
     </div>
-
         </>
       );
 }

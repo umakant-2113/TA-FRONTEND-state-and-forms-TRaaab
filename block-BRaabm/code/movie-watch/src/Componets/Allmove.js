@@ -22,7 +22,7 @@ class AllMovie extends React.Component {
             <>
                 <div key={movie.Title} className='flex-45 nnnn'>
                   <figure>
-                    <img src={movie.Poster} alt='' />
+                    <img className='img' src={movie.Poster} alt='' />
                   </figure>
 
                    <h2 className='title'>MovieName : {movie.Title} </h2>
@@ -35,7 +35,7 @@ class AllMovie extends React.Component {
                 </div>
                 </div>
 
-                {this.state.activeIndex === index ? ( <div className='details' > <Details data={movie} /> </div>) : ''}
+                {this.state.activeIndex === index ?  <div className='details' > <Details data={movie} /> </div> : ''}
        
             </>
           );

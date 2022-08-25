@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/* general css */
+
+.container{
+  max-width: 1400px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+/* img{
+  width: 100%;
+  height: 300px;
+} */
+
+figure{
+  font-size: 0;
+  border-radius: 15px;
+}
+
+.all-movie{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.flex-45{
+  flex: 0 1 31%;
+
+  margin: 10px 0;
+
+}
+
+.img{
+  width: 98%;
+  height: 310px;
+  border-radius : 1.5rem;
+}
+.title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(141, 102, 141);
+  margin: 13px 0;
+}
+.released-date{
+  font-size: 1.3rem;
+  margin-left: 13px 0;
+}
+.header{
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  background-color: thistle;
+  padding: .7rem 0;
+  border-radius: 15px;
+  font-weight: 600;
+  color: rgb(73, 71, 84);
+}
+
+.btn{
+  margin: 10px 0;
+  font-size: 1.3rem;
+  background-color: teal;
+  border: none;
+  color: white;
+  /* text-align: center; */
+  border-radius: 5px;
+  cursor: pointer;
+ display: none;
+
+}
+
+.flex-45:hover  .btn{
+display: block;
+
+}
+
+.big-div-box{
+border: 4px solid red;
+width: 70%;
+
+}
+
+.details{
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 0px 2px 2px sandybrown;
+  right: 50%;
+  left: 36%;
+  top: -1.6rem;
+  width: 30%;
+  z-index: 4;
+}
+.img-details{
+  width: 100%;
+  height: 350px;
+  margin: 0 12px;
+}
+.image-div{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}
+.span-btn{
+  text-align: right;
+  margin: 4px;
+}
+.span-btn span{
+  font-size: 1.4rem;
+}
+/* title year  released director  actor rating */
+
+.btn-div{
+  text-align: right;
+}
+.title1{
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 5px 0;
+  color: rgb(79, 76, 79);
+}
+.year{
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  margin: 5px 0;
+  color: rgb(79, 76, 79);
+}
+.caption{
+  text-align: center;
+}
+.caption strong{
+  font-size: 1.3rem;
+  margin: 4px;
+  font-weight: 600;
+  color: rgb(79, 76, 79);
+}
+
+.rated{
+  font-size: 1.3rem;
+  color: rgb(79, 76, 79);
+  font-weight: 500;
+  margin: 5px 5px;
+}
+.released {
+  font-size: 1.3rem;
+  color: rgb(79, 76, 79);
+  font-weight: 500;
+  margin: 5px 5px;
+}
+.director{
+  font-size: 1.3rem;
+  color: rgb(79, 76, 79);
+  font-weight: 500;
+  margin: 5px 5px;
+}
+.actor{
+  font-size: 1.3rem;
+  color: rgb(79, 76, 79);
+  font-weight: 500;
+  margin: 5px 5px;
+}
+.rating{
+  font-size: 1.3rem;
+  color: rgb(79, 76, 79);
+  font-weight: 500;
+  margin: 5px 5px;
+}

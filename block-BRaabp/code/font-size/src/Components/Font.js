@@ -1,4 +1,5 @@
 import React from 'react';
+let head = document.querySelector('head')
 
 class Font extends React.Component {
   constructor() {
@@ -38,26 +39,16 @@ class Font extends React.Component {
         </div>
         <div className='font-box'>
           {[
-            'Roboto',
-            'Poppins',
-            'Aboreto',
-            'Open Sans',
-            'Nato Sans',
-            'Lato',
-            'Montseret',
-            'Oswald',
-            'Mukta',
-            'Inter',
-            'Releway',
-            'Robot Slab',
-            'Nunito',
-            'Barlow',
-            'Kanit',
-            'Karla',
-            'DM Sans',
-            'Oxygen',
-            'Anton',
-            'Prompt'
+             'Dancing Script',
+             'Lobster',
+             'Pacifico',
+             'Shadows Into Light',
+             'Indie Flower',
+             'Satisfy',
+             'Montserrat',
+             'Nunito Sans',
+             'Roboto Condensed',
+             'Source Sans Pro'
           ].map((font,index) => {
             return (
               <div className='flex-30' key={index}>
@@ -66,8 +57,10 @@ class Font extends React.Component {
                   style={{
                     fontSize: ` ${this.state.fontSize}`,
                     margin: '15px',
-                    fontWeight:`${index*50}`,
-                    lineHeight : "1.3"
+                    fontWeight: "900",
+                    lineHeight : "1.3",
+                    fontFamily: ` ${font} , cursive`,
+                    url: ''
                   }}
                 >
                   {' '}

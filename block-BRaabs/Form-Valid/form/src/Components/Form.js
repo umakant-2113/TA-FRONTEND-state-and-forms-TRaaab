@@ -11,6 +11,8 @@ class Form extends React.Component {
     };
   }
 
+
+
   handleCheck = (event) => {
     if (event.target.checked) {
       this.setState((preState) => ({
@@ -20,7 +22,6 @@ class Form extends React.Component {
       }));
     }
   };
-
   handleInput = ({ target }) => {
     let { name, value } = target;
     switch (name) {
@@ -48,6 +49,7 @@ class Form extends React.Component {
         <section className='section'>
           <div className='flex-45'>
             <form>
+
               <legend className='legend'>Shipping Address </legend>
               <div className='form-div'>
                 <label htmlFor=''> Address </label>
@@ -58,6 +60,7 @@ class Form extends React.Component {
                   onChange={this.handleInput}
                   placeholder='Dharam shala Himanchal Pradesh'
                 />
+
                 <span className='span'>{this.state.errors} </span>
                 <label htmlFor=''>ZIP/Postal Code </label>
                 <input
@@ -67,6 +70,7 @@ class Form extends React.Component {
                   onChange={this.handleInput}
                   placeholder='P C 210430'
                 />
+
                 <label htmlFor=''> City </label>
                 <input
                   type='text'
@@ -75,6 +79,7 @@ class Form extends React.Component {
                   onChange={this.handleInput}
                   placeholder='Rath'
                 />
+
                 <label htmlFor=''>Country </label>
                 <input
                   type='text'
@@ -83,6 +88,7 @@ class Form extends React.Component {
                   onChange={this.handleInput}
                   placeholder='India'
                 />
+                
               </div>
             </form>
           </div>

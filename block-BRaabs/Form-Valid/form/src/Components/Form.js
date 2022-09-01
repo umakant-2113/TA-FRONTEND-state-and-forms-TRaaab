@@ -5,8 +5,10 @@ class Form extends React.Component {
     super();
 
     this.state = {
-      shipping: {},
-      billing: {},
+      shipping: {  },
+      billing: {
+
+      },
       errors: '',
     };
   }
@@ -23,7 +25,10 @@ class Form extends React.Component {
     }
   };
   handleInput = ({ target }) => {
+
     let { name, value } = target;
+
+    console.log(name,value,this.state)
     switch (name) {
       case 'address':
         this.state.errors = value.length < 8 ? '' : 'character at Least 8 char';
@@ -33,13 +38,14 @@ class Form extends React.Component {
         break;
     }
 
-    this.setState((preState) => ({
-      shipping: {
-        ...preState.shipping,
-        [name]: value,
-      },
-      errors: preState.errors,
-    }));
+   this.setState((preState)=>{
+  return {
+    ...preState,
+    shipping:{
+      [name]: value
+    }
+  }
+   })
   };
 
   render() {

@@ -119,9 +119,6 @@ class Shopping extends React.Component {
 
           <div className='flex-15'>
             <Cart handleChange={this.handleChange} />
-            {
-                
-            }
           </div>
         </div>
       </>

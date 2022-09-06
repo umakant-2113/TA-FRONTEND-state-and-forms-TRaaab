@@ -57,6 +57,7 @@
 }
 .img-cart {
   height: 100px;
+  cursor: pointer;
 }
 .flex1-80 {
   width: 80%;
@@ -110,5 +111,40 @@ cursor: pointer;
 }
 .flex-50{
   flex: 0 1 10%;
+}
+.product-details{
+  border: 1px solid red;
+  // display: none;
+  position: absolute;
+  right: 0rem;
+  top:12rem;
+  bottom: 2rem;
+  width: 15%;
+}
 
+.card{
+  border: 2px solid red;
+  position: absolute;
+  top: 12rem;
+  width: 15%;
+  right: 0rem;
+  display: none;
+}
+
+.span-btn{
+  cursor: pointer;
+  margin: .8rem 0;
+}
+.cart-img{
+  height: 140px;
+  width: 140px;
+}
+.item{
+  margin: .6rem 0;
+}
+.total{
+  background-color: black;
+  color: white;
+  padding: .5rem 0;
+  font-size: 1.4rem;
 }

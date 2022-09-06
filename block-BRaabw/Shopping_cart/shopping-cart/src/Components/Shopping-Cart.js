@@ -5,32 +5,13 @@ import Header from './Header';
 import Products from './Products';
 import Cart from './Cart';
 
-const imageNames = [
-  '103.jpg',
-  '105.jpg',
-  '107.jpg',
-  '109.jpg',
-  '111.jpg',
-  '113.jpg',
-  '115.jpg',
-  '117.jpg',
-  'large-1.jpg',
-  'large3.jpg',
-  'large4.jpg',
-  'larger5.jpg',
-  'large6.jpg',
-  '100_1.jpg',
-  '109.jpg',
-  'lerger2.jpg',
-];
-
 class Shopping extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       activeTags: [],
       sort: 'None',
-      activeIndex: 0,
+      activeIndex: [],
     };
   }
 
@@ -58,14 +39,46 @@ class Shopping extends React.Component {
     });
   };
 
-  handClick = (index) => {
-    console.log(index);
-    this.setState({
-      activeIndex: index,
-    });
-  };
+  handClick = (data) => {
+    let arr = this.state.activeIndex;
 
+    if (arr.length === 0) {
+      this.setState((prevState) => {
+        let ar = prevState.activeIndex;
+        return {
+          activeIndex: ar.concat({ ...data, quantity: 1 }),
+        };
+      });
+    } else {
+      for (let elm of arr) {
+
+        let index = arr.indexOf(elm);
+        if (elm.title === data.title) {
+          elm['quantity'] = elm.quantity + 1;
+          this.setState((prevState) => {
+            let ar = prevState.activeIndex;
+            return {
+              activeIndex: [...arr],
+            };
+          });
+          break;
+
+        } else if (index == arr.length - 1 && elm.title !== data.title) {
+
+          this.setState((prevState) => {
+            let ar = prevState.activeIndex;
+            return {
+              activeIndex: ar.concat({ ...data, quantity: 1 }),
+            };
+          });
+          
+        }
+      }
+    }
+  };
   render() {
+    console.log(this.state.activeIndex);
+
     // filter
     let dataFinal = [];
     let data2 = [];
@@ -111,14 +124,13 @@ class Shopping extends React.Component {
             />
           </div>
 
-          <Products
-            imageNames={imageNames}
-            filterData={dataFinal}
-            handClick={this.handClick}
-          />
+          <Products handClick={this.handClick} filterData={dataFinal} />
 
           <div className='flex-15'>
-            <Cart handleChange={this.handleChange} />
+            <Cart
+              handleChange={this.handleChange}
+              data={this.state.activeIndex}
+            />
           </div>
         </div>
       </>

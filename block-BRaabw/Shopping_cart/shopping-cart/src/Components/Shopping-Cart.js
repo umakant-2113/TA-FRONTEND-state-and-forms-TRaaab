@@ -19,6 +19,8 @@ class Shopping extends React.Component {
   handleActiveTags = (tag) => {
     let state = [...this.state.activeTags];
 
+    console.log(state)
+
     this.setState((prevState) => {
       if (prevState.activeTags.includes(tag)) {
         let ind = state.findIndex((t) => t === tag);
@@ -26,14 +28,14 @@ class Shopping extends React.Component {
       } else {
         state.push(tag);
       }
-      return { activeTags: state };
+      return { activeTags : state };
     });
   };
 
   //   low to high active
 
   handleChange = (event) => {
-    console.log(event);
+    // console.log(event);
     this.setState({
       sort: event.target.value,
     });
@@ -71,7 +73,7 @@ class Shopping extends React.Component {
               activeIndex: ar.concat({ ...data, quantity: 1 }),
             };
           });
-          
+
         }
       }
     }

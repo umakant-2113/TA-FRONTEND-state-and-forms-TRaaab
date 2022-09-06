@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Anchor Decoration */
+a {
+  text-decoration: none;
+}
+
+/* Image Adjust */
+.full-width {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Positions */
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.z-index-50 {
+  z-index: 50;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.35rem 1rem;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: purple;
+  border: 1px solid purple;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: purple;
+  border: 1px solid purple;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.flex-15 {
+  flex: 0 1 13%;
+}
+
+.flex-75 {
+  flex: 0 1 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cart-data {
+  margin: 1rem;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 5px 2px grey;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.btn-all {
+  background-color: black;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.cart-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-cart {
+  height: 100px;
+  cursor: pointer;
+}
+
+.flex1-80 {
+  width: 80%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.header {
+  text-align: center;
+  background-color: teal;
+  padding: 1rem 0;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-box p {
+  width: 35px;
+  height: 35px;
+  background-color: teal;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.tag-box .active {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+.card-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-50 {
+  flex: 0 1 10%;
+}
+
+.product-details {
+  border: 1px solid red;
+  position: absolute;
+  right: 0rem;
+  top: 12rem;
+  bottom: 2rem;
+  width: 15%;
+}
+
+.card {
+  border: 2px solid red;
+  position: absolute;
+  top: 12rem;
+  width: 15%;
+  right: 0rem;
+  display: none;
+}
+
+.span-btn {
+  cursor: pointer;
+  margin: 0.8rem 0;
+}
+
+.cart-img {
+  height: 140px;
+  width: 140px;
+}
+
+.item {
+  margin: 0.6rem 0;
+}
+
+.total {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+}/*# sourceMappingURL=Style.css.map */
